@@ -13,16 +13,53 @@ function console_log ($obj) {
   error_log($contents);
 }
 
+/**
+ * @param {Array} $file An associative array.
+ * @return {Bool}
+ */
+function is_valid_file ($file) {
+  $mime_type = $file['type'];
+
+  if ( $mime_type === 'image/png'
+    || $mime_type === 'image/jpeg'
+    || $mime_type === 'image/gif'
+    ) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * @param {Array} $file An associative array.
+ * @return {string}
+ */
+function get_file_type_suffix ($file) {
+  $mime_type = $file['type'];
+
+  if ($mime_type === 'image/png') {
+    return 'png';
+  } elseif ($mime_type === 'image/jpeg') {
+    return 'jpg';
+  } elseif ($mime_type === 'image/gif') {
+    return 'gif';
+  } else {
+    throw new Exception('Valid file array not provided to get_file_type_suffix.');
+  }
+}
+
 // CONSTANTS
 //
 
 $BASE_DIR = '../';
 $DESTINATION_DIR = 'images';
 
-//console_log($_FILES['userfile']);
+if (!is_valid_file($_FILES['userfile'])) {
+  die('Not a valid image file!');
+}
 
+// Determine the int value of the last image uploaded
 $files = scandir($BASE_DIR . $DESTINATION_DIR);
-
 $largest_int_found = 0;
 foreach($files as $file) {
   $file_chunks = explode('.', $file);
@@ -39,11 +76,12 @@ foreach($files as $file) {
   }
 }
 
+// Build new file name
 $path = $BASE_DIR . $DESTINATION_DIR . '/';
-// TODO: Determine $file_suffix by examining the MIME type.
-$file_suffix = end(explode('.', $_FILES['userfile']['name']));
+$file_suffix = get_file_type_suffix($_FILES['userfile']);
 $new_file_name = $path . (string)($largest_int_found + 1) . '.' . $file_suffix;
 
+// Save the uploaded file
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $new_file_name)) {
   echo 'File uploaded as ' . $new_file_name;
 } else {
