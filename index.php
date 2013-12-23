@@ -1,3 +1,9 @@
+<?php
+
+require('php/constants.php');
+
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>    <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>     <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -13,7 +19,7 @@
   <body>
 <!-- Cobbled together with the help of: http://www.php.net/manual/en/features.file-upload.post-method.php -->
 <form enctype="multipart/form-data" action="/php/upload.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+  <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $MAX_FILE_SIZE; ?>" />
   <!-- Name of input element determines name in $_FILES array -->
   Send this file: <input name="userfile" type="file" />
   <input type="submit" value="Send File" />

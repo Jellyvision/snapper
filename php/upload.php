@@ -1,5 +1,7 @@
 <?php
 
+require('constants.php');
+
 // References:
 //
 //   http://www.php.net/manual/en/features.file-upload.post-method.php
@@ -47,12 +49,6 @@ function get_file_type_suffix ($file) {
     throw new Exception('Valid file array not provided to get_file_type_suffix.');
   }
 }
-
-// CONSTANTS
-//
-
-$BASE_DIR = '../';
-$DESTINATION_DIR = 'images';
 
 if (!is_valid_file($_FILES['userfile'])) {
   die('Not a valid image file!');
