@@ -19,7 +19,7 @@ require('php/constants.php');
   <body>
 <!-- Cobbled together with the help of: http://www.php.net/manual/en/features.file-upload.post-method.php -->
 <form enctype="multipart/form-data" action="/php/upload.php" method="POST">
-  <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo $MAX_FILE_SIZE; ?>" />
+  <input type="hidden" name="MAX_FILE_SIZE" value="<?php echo constant('MAX_FILE_SIZE'); ?>" />
   <!-- Name of input element determines name in $_FILES array -->
   Send this file: <input name="userfile" type="file" />
   <input type="submit" value="Send File" />

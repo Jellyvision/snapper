@@ -22,14 +22,18 @@ function console_log ($obj) {
 function is_valid_file ($file) {
   $mime_type = $file['type'];
 
-  if ( $mime_type === 'image/png'
-    || $mime_type === 'image/jpeg'
-    || $mime_type === 'image/gif'
+  if ( $mime_type !== 'image/png'
+    && $mime_type !== 'image/jpeg'
+    && $mime_type !== 'image/gif'
     ) {
-    return true;
+    return false;
   }
 
-  return false;
+  if ($file['size'] > constant('MAX_FILE_SIZE')) {
+    return false;
+  }
+
+  return true;
 }
 
 /**
@@ -55,7 +59,7 @@ if (!is_valid_file($_FILES['userfile'])) {
 }
 
 // Determine the int value of the last image uploaded
-$files = scandir($BASE_DIR . $DESTINATION_DIR);
+$files = scandir(constant('BASE_DIR') . constant('DESTINATION_DIR'));
 $largest_int_found = 0;
 foreach($files as $file) {
   $file_chunks = explode('.', $file);
@@ -73,7 +77,7 @@ foreach($files as $file) {
 }
 
 // Build new file name
-$path = $BASE_DIR . $DESTINATION_DIR . '/';
+$path = constant('BASE_DIR') . constant('DESTINATION_DIR') . '/';
 $file_suffix = get_file_type_suffix($_FILES['userfile']);
 $new_file_name = $path . (string)($largest_int_found + 1) . '.' . $file_suffix;
 
