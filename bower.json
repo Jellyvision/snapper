@@ -1,0 +1,15 @@
+{
+  "name": "snapper",
+  "version": "0.0.1",
+  "homepage": "https://github.com/jeremyckahn/snapper",
+  "authors": [
+    "Jeremy Kahn <jeremyckahn@gmail.com>"
+  ],
+  "description": "A drop-dead simple image sharing service",
+  "main": "index.php",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "dropzone": "~3.8.2"
+  }
+}
