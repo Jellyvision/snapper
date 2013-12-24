@@ -10,8 +10,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="bower_components/dropzone/downloads/css/dropzone.css"/>
+    <style>
+      h1 {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
+  <h1>Drag an image file below to share it.</h1>
   <form id="file-dropzone" action="/php/upload.php" class="dropzone"></form>
   <script src="bower_components/dropzone/downloads/dropzone.min.js"></script>
   <script src="scripts/main.js"></script>
