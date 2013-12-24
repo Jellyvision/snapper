@@ -34,6 +34,10 @@ this on any public server because it is so prone to abuse and spamming.  _Only
 install Snapper if you trust all of the potential users who will have access to
 it._
 
+Snapper is currenty _very_ bare-bones.  Don't be surprise to find bugs.  If you
+do, please [file a bug report](https://github.com/jeremyckahn/snapper/issues)
+or [submit a Pull Request](https://github.com/jeremyckahn/snapper/pulls)!
+
 ## Installation
 
 To install Snapper, just download/`git clone` the files and configure

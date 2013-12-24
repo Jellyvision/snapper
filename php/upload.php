@@ -84,8 +84,8 @@ $new_file_name = $path . (string)($largest_int_found + 1) . '.' . $file_suffix;
 // Save the uploaded file
 if (move_uploaded_file($_FILES['file']['tmp_name'], $new_file_name)) {
   $img_url_path = end(explode(constant('BASE_DIR'), $new_file_name));
-  $full_img_url = '///' . $_SERVER['HTTP_HOST'] . '/' . $img_url_path;
-  echo $full_img_url;
+  $img_url = '/' . $img_url_path;
+  echo $img_url;
 } else {
   die('///' . $_SERVER['HTTP_HOST'] . '/error.html');
 }
