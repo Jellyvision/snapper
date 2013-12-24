@@ -9,6 +9,7 @@
     <title>Snapper</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="bower_components/dropzone/downloads/css/dropzone.css"/>
   </head>
   <body>
 <form id="file-dropzone" action="/php/upload.php" class="dropzone"></form>
