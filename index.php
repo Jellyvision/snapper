@@ -14,5 +14,6 @@
   <body>
   <form id="file-dropzone" action="/php/upload.php" class="dropzone"></form>
   <script src="bower_components/dropzone/downloads/dropzone.min.js"></script>
+  <script src="scripts/main.js"></script>
   </body>
 </html>
