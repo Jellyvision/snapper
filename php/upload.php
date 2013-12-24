@@ -54,7 +54,7 @@ function get_file_type_suffix ($file) {
   }
 }
 
-if (!is_valid_file($_FILES['userfile'])) {
+if (!is_valid_file($_FILES['file'])) {
   die('Not a valid image file!');
 }
 
@@ -78,11 +78,11 @@ foreach($files as $file) {
 
 // Build new file name
 $path = constant('BASE_DIR') . constant('DESTINATION_DIR') . '/';
-$file_suffix = get_file_type_suffix($_FILES['userfile']);
+$file_suffix = get_file_type_suffix($_FILES['file']);
 $new_file_name = $path . (string)($largest_int_found + 1) . '.' . $file_suffix;
 
 // Save the uploaded file
-if (move_uploaded_file($_FILES['userfile']['tmp_name'], $new_file_name)) {
+if (move_uploaded_file($_FILES['file']['tmp_name'], $new_file_name)) {
   echo 'File uploaded as ' . $new_file_name;
 } else {
   die('There was a problem with the uploaded file.');
