@@ -41,7 +41,7 @@ or [submit a Pull Request](https://github.com/jeremyckahn/snapper/pulls)!
 ## Installation
 
 To install Snapper, just download/`git clone` the files and configure
-[MAMP](http://www.mamp.info/en/index.html)/[WAMP](http://www.wampserver.com/en/)/[LAMP](http://en.wikipedia.org/wiki/LAMP_(software_bundle))
+[MAMP](http://www.mamp.info/en/index.html)/[WAMP](http://www.wampserver.com/en/)/[LAMP](https://help.ubuntu.com/community/ApacheMySQLPHP)
 to point to the `snapper/` root.  Snapper requires [Bower](http://bower.io/)
 for the front end packages, so make sure that is installed.  When it is, run
 this BASH command:
