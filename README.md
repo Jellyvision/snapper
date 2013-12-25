@@ -52,7 +52,7 @@ bower install
 
 That's it.  Navigate to `localhost` and start dropping images.
 
-## How do use Snapper
+## How to use Snapper
 
 There really isn't much to it: Open the web page that Snapper is being served
 from and drag an image from your file system onto the big gray rectangle.
