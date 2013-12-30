@@ -87,7 +87,7 @@ if (move_uploaded_file($_FILES['file']['tmp_name'], $new_file_name)) {
   $img_url = $_SERVER['HTTP_REFERER'] . $img_path;
   echo $img_url;
 } else {
-  die('///' . $_SERVER['HTTP_HOST'] . '/error.html');
+  die($_SERVER['HTTP_REFERER'] . 'error.html');
 }
 
 ?>
