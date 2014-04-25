@@ -2,6 +2,24 @@
 
 require('constants.php');
 
+//      .----.__
+//     / c  ^  _`;   Hello!  I'm an otter!
+//     |     .--'
+//      \   (
+//      /  -.\
+//     / .   \
+//    /  \    |
+//   ;    `-. `.
+//   |      /`'.`.
+//   |      |   \ \
+//   |    __|    `'
+//   ;   /   \
+//  ,'        |
+// (_`'---._ /--,
+//   `'---._`'---..__
+//          `''''--, )
+//            _.-'`,`
+
 // References:
 //
 //   http://www.php.net/manual/en/features.file-upload.post-method.php
