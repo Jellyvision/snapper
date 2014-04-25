@@ -2,6 +2,7 @@
 
 require('constants.php');
 
+// http://www.retrojunkie.com/asciiart/animals/otters.htm
 //      .----.__
 //     / c  ^  _`;   Hello!  I'm an otter!
 //     |     .--'
@@ -17,7 +18,7 @@ require('constants.php');
 //  ,'        |
 // (_`'---._ /--,
 //   `'---._`'---..__
-//          `''''--, )
+// jgs      `''''--, )
 //            _.-'`,`
 
 // References:
