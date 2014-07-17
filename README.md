@@ -63,6 +63,6 @@ offer.  Enjoy!
 
 ## License
 
-Snapper is distibuted by [Jeremy Kahn](http://jeremyckahn.com/) under the [MIT
+Snapper is distibuted by [Jellyvision](http://www.jellyvision.com/) under the [MIT
 license](http://opensource.org/licenses/MIT). You are encouraged to use and
 modify the code to suit your needs, as well as redistribute it.
