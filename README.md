@@ -12,19 +12,11 @@ __doesn't do__:
 * Offer hardly any security to speak of
 
 You might say, "wait, this sounds kind of terrible," and you'd probably be
-right.  Snapper _is_ terrible for most use cases due to the list above.  I
-built Snapper for one specific purpose: __I need a firewalled web app that lets
-me quickly share images with my coworkers by dragging and dropping files__.
-That's Snapper's single feature, and it does that pretty well.  If you need
-something similar, Snapper is for you!
-
-## PHP??!
-
-Yeah, PHP.  No, I don't like the language either.  _But_, PHP does exactly what
-I need for this use case, and it runs pretty much everywhere with minimal fuss.
-All you need is a MAMP/LAMP/WAMP stack set up and you're off to the races.
-Snapper doesn't use a database, so you won't need to worry about setting that
-up.
+right.  Snapper _is_ terrible for most use cases due to the list above.  We
+built Snapper for one specific purpose: __We needed a firewalled web app that
+lets us quickly share images by dragging and dropping files__.  That's
+Snapper's single feature, and it does that pretty well.  If you need something
+similar, Snapper is for you!
 
 # Disclaimer!
 
@@ -34,9 +26,9 @@ this on any public server because it is so prone to abuse and spamming.  _Only
 install Snapper if you trust all of the potential users who will have access to
 it._
 
-Snapper is currenty _very_ bare-bones.  Don't be surprise to find bugs.  If you
-do, please [file a bug report](https://github.com/jeremyckahn/snapper/issues)
-or [submit a Pull Request](https://github.com/jeremyckahn/snapper/pulls)!
+Snapper is currenty _very_ bare-bones.  If you find an issue, please [file a
+bug report](https://github.com/jellyvision/snapper/issues) or [submit a Pull
+Request](https://github.com/jellyvision/snapper/pulls)!
 
 ## Installation
 
