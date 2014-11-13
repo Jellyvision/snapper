@@ -23,7 +23,7 @@
   <body>
   <h1>Drag an image file below to share it.</h1>
   <form id="file-dropzone" action="php/upload.php" class="dropzone"></form>
-  <img class="logo" src="asset/img/logo.jpg" alt="Snapper logo">
+  <img class="logo" src="images/<?php $a=scandir("images");$b=$a[rand(4, count($a))];echo $b;?>" alt="Snapper logo">
   <script src="bower_components/dropzone/downloads/dropzone.min.js"></script>
   <script src="scripts/main.js"></script>
   </body>
