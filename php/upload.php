@@ -108,5 +108,3 @@ if (move_uploaded_file($_FILES['file']['tmp_name'], $new_file_name)) {
 } else {
   die($_SERVER['HTTP_REFERER'] . 'error.html');
 }
-
-?>
